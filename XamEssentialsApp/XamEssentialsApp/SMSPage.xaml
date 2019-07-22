@@ -1,0 +1,21 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage x:Class="XamEssentialsApp.SMSPage"
+             xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             Title="SMS Page"
+             mc:Ignorable="d">
+
+    <ContentPage.Content>
+        <StackLayout Padding="20">
+            <Label x:Name="LabelPrefValue"
+                   HorizontalOptions="FillAndExpand"
+                   Text="Enter Text to SMS:" />
+
+            <Entry x:Name="EntrySMSText" HorizontalOptions="FillAndExpand" />
+
+            <Button Clicked="OnSMSTextClicked" Text="Send SMS" />
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

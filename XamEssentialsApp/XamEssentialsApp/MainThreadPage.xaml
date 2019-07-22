@@ -1,0 +1,25 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             x:Class="XamEssentialsApp.MainThreadPage">
+    <ContentPage.Content>
+        <StackLayout Padding="20">
+            <Label Text="Welcome to Xamarin.Forms!"
+                   x:Name="LabelOutput"
+                   VerticalOptions="CenterAndExpand" 
+                   HorizontalOptions="CenterAndExpand" />
+
+            <Button Text="Do work on the background thread"
+                    Clicked="OnDoSomeWorkClicked"
+                    VerticalOptions="Center" 
+                    HorizontalOptions="Center"/>
+
+            <ActivityIndicator x:Name="ActivityIndicatorProgress"
+                               IsRunning="False"
+                               IsVisible="True"/>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

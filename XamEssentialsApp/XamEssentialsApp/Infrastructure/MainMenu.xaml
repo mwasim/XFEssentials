@@ -1,0 +1,199 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:models="clr-namespace:XamEssentialsApp.Models;assembly=XamEssentialsApp"
+             xmlns:pages="clr-namespace:XamEssentialsApp;assembly=XamEssentialsApp"
+             mc:Ignorable="d"
+             x:Class="XamEssentialsApp.Infrastructure.MainMenu"
+             Title="Menu"
+             Padding="0,40,0,0"
+             BackgroundColor="LightSlateGray"
+             IconImageSource="hamburger.png">
+    <StackLayout>
+        <ListView x:Name="ListViewMenu"
+                  BackgroundColor="Transparent">
+            <ListView.ItemsSource>
+                <x:Array Type="{x:Type models:MainMenuItem}">
+                    <models:MainMenuItem
+                        Title="Accelerometer"
+                        IconSource=""
+                        TargetType="{x:Type pages:AccelerometerPage}"/>
+                    
+                    <models:MainMenuItem
+                        Title="App Info"
+                        IconSource=""
+                        TargetType="{x:Type pages:AppInfoPage}"/>
+
+                    <models:MainMenuItem
+                        Title="Barometer"
+                        IconSource=""
+                        TargetType="{x:Type pages:BarometerPage}"/>
+
+                    <models:MainMenuItem
+                        Title="Battery Info"
+                        IconSource=""
+                        TargetType="{x:Type pages:BatteryInfoPage}"/>
+
+                    <models:MainMenuItem
+                        Title="Browser"
+                        IconSource=""
+                        TargetType="{x:Type pages:BrowserPage}"/>
+
+                    <models:MainMenuItem
+                        Title="Clipboard"
+                        IconSource=""
+                        TargetType="{x:Type pages:ClipboardPage}"/>
+
+                    <models:MainMenuItem
+                        Title="Color Converters"
+                        IconSource=""
+                        TargetType="{x:Type pages:ColorConvertersPage}"/>
+
+                    <models:MainMenuItem
+                        Title="Compass"
+                        IconSource=""
+                        TargetType="{x:Type pages:CompassPage}"/>
+
+                    <models:MainMenuItem
+                        Title="Connectivity"
+                        IconSource=""
+                        TargetType="{x:Type pages:ConnectivityPage}"/>
+
+                    <models:MainMenuItem
+                        Title="Device Display Info"
+                        IconSource=""
+                        TargetType="{x:Type pages:DeviceDisplayInfoPage}"/>
+
+                    <models:MainMenuItem
+                        Title="Device Info"
+                        IconSource=""
+                        TargetType="{x:Type pages:DeviceInfoPage}"/>
+
+                    <models:MainMenuItem
+                        Title="File System Helpers"
+                        IconSource=""
+                        TargetType="{x:Type pages:FileSysHelpersPage}"/>
+
+                    <models:MainMenuItem
+                        Title="Flashlight"
+                        IconSource=""
+                        TargetType="{x:Type pages:FlashlightPage}"/>
+
+                    <models:MainMenuItem
+                        Title="Geocoding"
+                        IconSource=""
+                        TargetType="{x:Type pages:GeocodingPage}"/>
+
+                    <models:MainMenuItem
+                        Title="Geolocation"
+                        IconSource=""
+                        TargetType="{x:Type pages:GeolocationPage}"/>
+
+                    <models:MainMenuItem
+                        Title="Gyroscope"
+                        IconSource=""
+                        TargetType="{x:Type pages:GyroscopePage}"/>
+
+                    <models:MainMenuItem
+                        Title="Launcher"
+                        IconSource=""
+                        TargetType="{x:Type pages:LauncherPage}"/>
+
+                    <models:MainMenuItem
+                        Title="Magnetometer"
+                        IconSource=""
+                        TargetType="{x:Type pages:MagnetometerPage}"/>
+
+                    <models:MainMenuItem
+                        Title="Main Thread"
+                        IconSource=""
+                        TargetType="{x:Type pages:MainThreadPage}"/>
+
+                    <models:MainMenuItem
+                        Title="Maps"
+                        IconSource=""
+                        TargetType="{x:Type pages:MapsPage}"/>
+
+                    <models:MainMenuItem
+                        Title="Orientation Sensor"
+                        IconSource=""
+                        TargetType="{x:Type pages:OrientationSensorPage}"/>
+
+                    <models:MainMenuItem
+                        Title="Phone Dialer"
+                        IconSource=""
+                        TargetType="{x:Type pages:PhoneDialerPage}"/>
+
+                    <models:MainMenuItem
+                        Title="Preferences"
+                        IconSource=""
+                        TargetType="{x:Type pages:PreferencesPage}"/>
+
+                    <models:MainMenuItem
+                        Title="Secure Storage"
+                        IconSource=""
+                        TargetType="{x:Type pages:SecureStoragePage}"/>
+
+                    <models:MainMenuItem
+                        Title="Send Email"
+                        IconSource=""
+                        TargetType="{x:Type pages:SendEmailPage}"/>
+
+                    <models:MainMenuItem
+                        Title="Shake Detect"
+                        IconSource=""
+                        TargetType="{x:Type pages:ShakeDetectPage}"/>
+
+                    <models:MainMenuItem
+                        Title="Share"
+                        IconSource=""
+                        TargetType="{x:Type pages:SharePage}"/>
+
+                    <models:MainMenuItem
+                        Title="SMS"
+                        IconSource=""
+                        TargetType="{x:Type pages:SMSPage}"/>
+
+                    <models:MainMenuItem
+                        Title="Text To Speech"
+                        IconSource=""
+                        TargetType="{x:Type pages:TextToSpeechPage}"/>
+
+                    <models:MainMenuItem
+                        Title="Unit Converters"
+                        IconSource=""
+                        TargetType="{x:Type pages:UnitConvertersPage}"/>
+
+                    <models:MainMenuItem
+                        Title="Version Tracking"
+                        IconSource=""
+                        TargetType="{x:Type pages:VersionTrackingPage}"/>
+
+                    <models:MainMenuItem
+                        Title="Vibrate Demo"
+                        IconSource=""
+                        TargetType="{x:Type pages:VibratePage}"/>
+                </x:Array>
+            </ListView.ItemsSource>
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <ViewCell>
+                        <Grid Padding="5,10">
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="30" />
+                                <ColumnDefinition Width="*" />
+                            </Grid.ColumnDefinitions>
+                            <Image Source="{Binding IconSource}" />
+                            <Label
+                                Grid.Column="1"
+                                Text="{Binding Title}"
+                                TextColor="#F1F1F1" />
+                        </Grid>
+                    </ViewCell>
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView>
+    </StackLayout>
+</ContentPage>

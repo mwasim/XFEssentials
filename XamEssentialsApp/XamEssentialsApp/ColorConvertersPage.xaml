@@ -1,0 +1,125 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage x:Class="XamEssentialsApp.ColorConvertersPage"
+             xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d">
+    <ContentPage.Content>
+        <Grid Padding="20">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="Auto" />
+
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="Auto" />
+
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="Auto" />
+            </Grid.RowDefinitions>
+
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="*" />
+            </Grid.ColumnDefinitions>
+
+            <!--  Apply HEX Color  -->
+            <Entry x:Name="EntryHexValue"
+                   Grid.Row="0"
+                   Grid.Column="0"
+                   Grid.ColumnSpan="3"
+                   HorizontalOptions="FillAndExpand"
+                   Text="#3498db"
+                   VerticalOptions="Center" />
+
+            <BoxView x:Name="BoxViewHexColor"
+                     Grid.Row="1"
+                     Grid.Column="0"
+                     HorizontalOptions="FillAndExpand"
+                     Color="Black" />
+
+            <BoxView x:Name="BoxViewHexColorMultiAlpha"
+                     Grid.Row="1"
+                     Grid.Column="2"
+                     HorizontalOptions="FillAndExpand"
+                     Color="Black" />
+
+            <Button x:Name="ButtonFromHexValue"
+                    Grid.Row="2"
+                    Grid.Column="0"
+                    Grid.ColumnSpan="3"
+                    Clicked="OnFromHexValueClicked"
+                    HorizontalOptions="Center"
+                    Text="Apply Hex Color"
+                    VerticalOptions="Center" />
+
+            <!--  Apply HSL Color  -->
+            <Entry x:Name="EntryHValue"
+                   Grid.Row="3"
+                   Grid.Column="0"
+                   HorizontalOptions="FillAndExpand"
+                   Text="204"
+                   VerticalOptions="Center" />
+
+            <Entry x:Name="EntrySValue"
+                   Grid.Row="3"
+                   Grid.Column="1"
+                   HorizontalOptions="FillAndExpand"
+                   Text="70"
+                   VerticalOptions="Center" />
+
+            <Entry x:Name="EntryLValue"
+                   Grid.Row="3"
+                   Grid.Column="2"
+                   HorizontalOptions="FillAndExpand"
+                   Text="53"
+                   VerticalOptions="Center" />
+
+            <BoxView x:Name="BoxViewHslColor"
+                     Grid.Row="4"
+                     Grid.Column="0"
+                     Grid.ColumnSpan="3"
+                     HorizontalOptions="FillAndExpand"
+                     Color="Black" />
+
+            <Button x:Name="ButtonFromHsl"
+                    Grid.Row="5"
+                    Grid.Column="0"
+                    Grid.ColumnSpan="3"
+                    Clicked="OnFromHslClicked"
+                    HorizontalOptions="Center"
+                    Text="Apply HSL Color"
+                    VerticalOptions="Center" />
+
+            <!--  Apply UInt Color  -->
+            <Entry x:Name="EntryUIntValue"
+                   Grid.Row="6"
+                   Grid.Column="0"
+                   Grid.ColumnSpan="3"
+                   HorizontalOptions="FillAndExpand"
+                   Text="3447003"
+                   VerticalOptions="Center" />
+
+            <BoxView x:Name="BoxViewUIntColor"
+                     Grid.Row="7"
+                     Grid.Column="0"
+                     Grid.ColumnSpan="3"
+                     HorizontalOptions="FillAndExpand"
+                     Color="Black" />
+
+            <Button x:Name="ButtonFromUIntValue"
+                    Grid.Row="8"
+                    Grid.Column="0"
+                    Grid.ColumnSpan="3"
+                    Clicked="OnFromUIntValueClicked"
+                    HorizontalOptions="Center"
+                    Text="Apply UInt Color"
+                    VerticalOptions="Center" />
+
+        </Grid>
+    </ContentPage.Content>
+</ContentPage>

@@ -1,0 +1,21 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage x:Class="XamEssentialsApp.OrientationSensorPage"
+             xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             Title="Orientation Sensor"
+             mc:Ignorable="d">
+
+    <ContentPage.Content>
+        <StackLayout>
+            <Label x:Name="LabelOrientationSensor"
+                   HorizontalOptions="CenterAndExpand"
+                   Text="Welcome to Xamarin.Forms!"
+                   VerticalOptions="CenterAndExpand" />
+
+            <Button Text="Toggle Orientation Sensor"
+                    Clicked="OnToggleOrientationSensorClicked"/>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

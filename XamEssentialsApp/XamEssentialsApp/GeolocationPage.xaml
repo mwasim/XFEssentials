@@ -1,0 +1,26 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage x:Class="XamEssentialsApp.GeolocationPage"
+             xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d">
+    <ContentPage.Content>
+        <StackLayout>
+            <Label x:Name="LabelLastKnownLocation"
+                   HorizontalOptions="CenterAndExpand"
+                   Text="Last known location"
+                   VerticalOptions="CenterAndExpand" />
+
+            <Label x:Name="LabelCurrentDeviceLocation"
+                   HorizontalOptions="CenterAndExpand"
+                   Text="CurrentDeviceLocation"
+                   VerticalOptions="CenterAndExpand" />
+
+            <Label x:Name="LabelDistanceBetweenTwoLocations"
+                   HorizontalOptions="CenterAndExpand"
+                   Text="IsLocationFromMockProvider"
+                   VerticalOptions="CenterAndExpand" />
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

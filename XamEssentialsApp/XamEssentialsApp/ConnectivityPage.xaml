@@ -1,0 +1,80 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             x:Class="XamEssentialsApp.ConnectivityPage"
+             Title="Connectivity Demo">
+
+    <ContentPage.Resources>
+        <ResourceDictionary Source="Resources/EntryValidationRD.xaml"/>
+        <StyleSheet Source="Styles/LoginPage.css" />
+    </ContentPage.Resources>
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+        </Grid.RowDefinitions>
+
+        <FlexLayout x:Name="Form" StyleClass="body">
+            <FlexLayout x:Name="LoginForm" StyleClass="container">
+                <Label Text="Hello, Please Login"/>
+                <FlexLayout StyleClass="login-form">
+                    <Entry x:Name="EntryUsername"
+                           IsSpellCheckEnabled="False"
+                           MaxLength="7"
+                           Placeholder="Username"
+                           Text="{Binding Username}"
+                           PlaceholderColor="{OnPlatform Android='#999'}"
+                           TextColor="{OnPlatform Android='#f1f1f1'}"/>
+
+                    <Entry x:Name="EntryPassword"
+                           IsSpellCheckEnabled="False"
+                           Placeholder="Password"
+                           TextChanged="OnPasswordTextChanged"
+                           PlaceholderColor="{OnPlatform Android='#999'}"
+                           TextColor="{OnPlatform Android='#f1f1f1'}"/>
+
+                    <Label x:Name="LabelStrengthIndicator"
+                           FontSize="24"
+                           HorizontalOptions="Center"
+                           HorizontalTextAlignment="Center"/>
+
+                    <Button Text="Login" Clicked="OnLoginClicked"/>
+
+                    <StackLayout Margin="50,10"
+                                 IsVisible="True"
+                                 Orientation="Horizontal">
+                        <Label Text="Remember Me: "/>
+                        <Switch IsToggled="{Binding RememberMe}"/>
+                    </StackLayout>
+                </FlexLayout>
+            </FlexLayout>
+        </FlexLayout>
+
+        
+
+        <Label x:Name="LabelConnection"
+               Grid.Row="1"
+               Margin="10"
+               HorizontalOptions="Center"
+               IsVisible="True"
+               Opacity="0"
+               Text="Disconnected"/>
+
+        <Label x:Name="LabelForgotPassword"
+               Grid.Row="2"
+               Margin="10"
+               HorizontalOptions="Center"
+               Text="Forgot Password?"
+               TextColor="Green"
+               IsVisible="False"
+               TextDecorations="Underline">
+            <Label.GestureRecognizers>
+                <TapGestureRecognizer Tapped="OnForgotPasswordTapped"/>
+            </Label.GestureRecognizers>
+        </Label>
+    </Grid>
+</ContentPage>

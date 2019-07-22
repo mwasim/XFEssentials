@@ -1,0 +1,42 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage x:Class="XamEssentialsApp.BarometerPage"
+             xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             Title="Barometer Info">
+
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*" />
+            <ColumnDefinition Width="*" />
+        </Grid.ColumnDefinitions>
+
+        <Label x:Name="LabelPressure"
+               Grid.ColumnSpan="2"
+               HorizontalOptions="CenterAndExpand"
+               Text="Pressure"
+               VerticalOptions="CenterAndExpand" />
+
+        <Button x:Name="ButtonStart"
+                Grid.Row="1"
+                Grid.Column="0"
+                Clicked="OnButtonStartClicked"
+                HorizontalOptions="CenterAndExpand"
+                Text="Start"
+                VerticalOptions="CenterAndExpand" />
+
+        <Button x:Name="ButtonStop"
+                Grid.Row="1"
+                Grid.Column="1"
+                Clicked="OnButtonStopClicked"
+                HorizontalOptions="CenterAndExpand"
+                Text="Stop"
+                VerticalOptions="CenterAndExpand" />
+    </Grid>
+</ContentPage>

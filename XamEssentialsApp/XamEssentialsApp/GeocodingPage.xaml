@@ -1,0 +1,40 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             x:Class="XamEssentialsApp.GeocodingPage"
+             Title="Geo-coding Demo">
+
+    <ContentPage.Content>
+        <ScrollView>
+            <StackLayout Padding="15" Spacing="6">
+                <ActivityIndicator IsRunning="{Binding IsBusy}" IsVisible="{Binding IsBusy}"/>
+
+                <Label
+                    Margin="0,6,0,0"
+                    FontAttributes="Bold"
+                    Text="Geocoding:" />
+                <Label Text="Latitude:" />
+                <Entry Text="{Binding Latitude}" Keyboard="Numeric"/>
+                <Label Text="Longitude:" />
+                <Entry Text="{Binding Longitude}" Keyboard="Numeric"/>
+                <Button Text="Detect Place-marks" Command="{Binding DetectPlacemarksCommand}"/>
+                <Label Text="{Binding GeocodeAddress}" />
+
+
+                <Label
+                    Margin="0,6,0,0"
+                    FontAttributes="Bold"
+                    Text="Reverse Geocoding:" />
+                <Label Text="Address:" />
+                <Entry Text="{Binding Address}"/>
+                <Button Text="Detect Location" Command="{Binding DetectLocationCommand}"/>
+                <Label Text="{Binding GeocodePosition}" />
+
+            </StackLayout>
+        </ScrollView>
+        
+    </ContentPage.Content>
+</ContentPage>

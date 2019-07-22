@@ -1,0 +1,172 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage x:Class="XamEssentialsApp.UnitConvertersPage"
+             xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             Title="Unit Converters"
+             mc:Ignorable="d">
+
+    <ContentPage.Content>
+        <ScrollView>
+            <StackLayout Padding="20" BackgroundColor="LightBlue">
+
+                <Label FontAttributes="Bold"
+                       FontSize="Large"
+                       Text="Unit Converters"
+                       HorizontalOptions="CenterAndExpand"/>
+
+                <Grid Padding="15"
+                      HorizontalOptions="FillAndExpand"
+                      RowSpacing="10"
+                      VerticalOptions="FillAndExpand">
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="Auto" />
+                        <RowDefinition Height="Auto" />
+
+                        <RowDefinition Height="Auto" />
+                        <RowDefinition Height="Auto" />
+
+                        <RowDefinition Height="Auto" />
+                        <RowDefinition Height="Auto" />
+
+                    </Grid.RowDefinitions>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="*" />
+                        <ColumnDefinition Width="*" />
+                        <ColumnDefinition Width="*" />
+                    </Grid.ColumnDefinitions>
+
+                    <!--  FahrenheitToCelsius  -->
+                    <Entry x:Name="EntryFromFahrenheit"
+                           Grid.Row="0"
+                           Grid.Column="0"
+                           HorizontalOptions="FillAndExpand"
+                           Text="98.6"
+                           VerticalOptions="Center" />
+
+                    <Button Grid.Row="0"
+                            Grid.Column="1"
+                            Clicked="FahrenheitToCelsiusClicked"
+                            HorizontalOptions="CenterAndExpand"
+                            Text="Fahrenheit To Celsius"
+                            VerticalOptions="Center" />
+
+                    <Entry x:Name="EntryToCelsius"
+                           Grid.Row="0"
+                           Grid.Column="2"
+                           HorizontalOptions="FillAndExpand"
+                           VerticalOptions="Center" />
+
+                    <!--  CelsiusToFahrenheit  -->
+                    <Entry x:Name="EntryFromCelsius"
+                           Grid.Row="1"
+                           Grid.Column="0"
+                           HorizontalOptions="FillAndExpand"
+                           Text="37"
+                           VerticalOptions="Center" />
+
+                    <Button Grid.Row="1"
+                            Grid.Column="1"
+                            Clicked="CelsiusToFahrenheitClicked"
+                            HorizontalOptions="CenterAndExpand"
+                            Text="Celsius To Fahrenheit"
+                            VerticalOptions="Center" />
+
+                    <Entry x:Name="EntryToFahrenheit"
+                           Grid.Row="1"
+                           Grid.Column="2"
+                           HorizontalOptions="FillAndExpand"
+                           VerticalOptions="Center" />
+
+
+                    <!--  MilesToKilometers  -->
+                    <Entry x:Name="EntryFromMiles"
+                           Grid.Row="2"
+                           Grid.Column="0"
+                           HorizontalOptions="FillAndExpand"
+                           Text="500"
+                           VerticalOptions="Center" />
+
+                    <Button Grid.Row="2"
+                            Grid.Column="1"
+                            Clicked="MilesToKilometersClicked"
+                            HorizontalOptions="CenterAndExpand"
+                            Text="Miles To Kilometers"
+                            VerticalOptions="Center" />
+
+                    <Entry x:Name="EntryToKilometers"
+                           Grid.Row="2"
+                           Grid.Column="2"
+                           HorizontalOptions="FillAndExpand"
+                           VerticalOptions="Center" />
+
+                    <!--  KilometersToMiles  -->
+                    <Entry x:Name="EntryFromKilometers"
+                           Grid.Row="3"
+                           Grid.Column="0"
+                           HorizontalOptions="FillAndExpand"
+                           Text="1000"
+                           VerticalOptions="Center" />
+
+                    <Button Grid.Row="3"
+                            Grid.Column="1"
+                            Clicked="KilometersToMilesClicked"
+                            HorizontalOptions="CenterAndExpand"
+                            Text="Kilometers To Miles"
+                            VerticalOptions="Center" />
+
+                    <Entry x:Name="EntryToMiles"
+                           Grid.Row="3"
+                           Grid.Column="2"
+                           HorizontalOptions="FillAndExpand"
+                           VerticalOptions="Center" />
+
+                    <!--  DegreesToRadians  -->
+                    <Entry x:Name="EntryFromDegrees"
+                           Grid.Row="4"
+                           Grid.Column="0"
+                           HorizontalOptions="FillAndExpand"
+                           Text="360"
+                           VerticalOptions="Center" />
+
+                    <Button Grid.Row="4"
+                            Grid.Column="1"
+                            Clicked="OnDegreesToRadiansClicked"
+                            HorizontalOptions="CenterAndExpand"
+                            Text="Degrees To Radians"
+                            VerticalOptions="Center" />
+
+                    <Entry x:Name="EntryToRadians"
+                           Grid.Row="4"
+                           Grid.Column="2"
+                           HorizontalOptions="FillAndExpand"
+                           VerticalOptions="Center" />
+
+                    <!--  RadiansToDegrees  -->
+                    <Entry x:Name="EntryFromRadians"
+                           Grid.Row="5"
+                           Grid.Column="0"
+                           HorizontalOptions="FillAndExpand"
+                           Text="45"
+                           VerticalOptions="Center" />
+
+                    <Button Grid.Row="5"
+                            Grid.Column="1"
+                            Clicked="RadiansToDegreesClicked"
+                            HorizontalOptions="CenterAndExpand"
+                            Text="Radians To Degrees"
+                            VerticalOptions="Center" />
+
+                    <Entry x:Name="EntryToDegrees"
+                           Grid.Row="5"
+                           Grid.Column="2"
+                           HorizontalOptions="FillAndExpand"
+                           VerticalOptions="Center" />
+
+                </Grid>
+            </StackLayout>
+
+        </ScrollView>
+    </ContentPage.Content>
+</ContentPage>
